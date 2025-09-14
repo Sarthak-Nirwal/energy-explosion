@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energy Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Energy Explorer</h1>
+    <p>Two Paths to a Sustainable Future</p>
+    <div class="logos">
+      <img src="du-logo.png" alt="DU Logo" />
+      <img src="nasa-logo.png" alt="NASA Logo" />
+      <img src="iuac-logo.png" alt="IUAC Logo" />
+      <img src="jaxa-logo.png" alt="JAXA Logo" />
+    </div>
+  </header>
+
+  <main>
+    <section class="panel sbsp">
+      <h2>Space-Based Solar Power (SBSP)</h2>
+      <ul>
+        <li><strong>Concept:</strong> Solar energy captured in orbit, transmitted via microwave</li>
+        <li><strong>Designs:</strong> RD1: Heliostat Swarm · RD2: Planar Array</li>
+        <li><strong>Technologies:</strong> ISAM · Electric Propulsion · Beam Control</li>
+        <li><strong>Impact:</strong> 3–4 gCO₂/kWh · $0.04–$0.08/kWh · Disaster Relief</li>
+      </ul>
+      <button onclick="showMap('sbsp')">View SBSP Map</button>
+    </section>
+
+    <section class="panel nuclear">
+      <h2>Advanced Nuclear Technologies</h2>
+      <ul>
+        <li><strong>Concept:</strong> Uranium-235 fueled SMRs and NARs</li>
+        <li><strong>Performance:</strong> ~82–83 TJ/kg · Single-digit gCO₂/kWh</li>
+        <li><strong>Benefits:</strong> Grid Reliability · Energy Security · Smart Grid Integration</li>
+        <li><strong>Security:</strong> Passive Cooling · Safeguards · Community Co-ownership</li>
+      </ul>
+      <button onclick="showMap('nuclear')">View Nuclear Map</button>
+    </section>
+
+    <section id="map">
+      <h3>Deployment Zones</h3>
+      <img src="world-map.png" alt="World Map" />
+      <p id="map-label">Select a technology to view deployment zones.</p>
+    </section>
+
+    <section id="chart-section">
+      <h3>Lifecycle Emissions Comparison</h3>
+      <canvas id="emissionsChart" width="400" height="200"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <p>Two Technologies. One Goal. A Cleaner, More Resilient Planet.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
